@@ -2,10 +2,12 @@ from src.read_csi_csv import read_csi_csv
 from src.preprocessing import smooth_csi, normalize_csi
 import sys,os
 
-sys.path.insert(0, '/path/to/Project') # location of src 
+
+path = os.path.abspath(".")
+sys.path.insert(0, path) # location of src 
 
 # Step 1: Load CSV
-df = read_csi_csv('/csi_data/walk/walk_0.csv')
+df = read_csi_csv(f'{path}/csi_data/walk/walk_0.csv')
 
 # Assume subcarriers are in columns: sc1, sc2, ..., sc30
 subcarrier_columns = [col for col in df.columns if 'sc' in col.lower()]
