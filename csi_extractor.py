@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import csiread
 
 # โหลดไฟล์ที่ได้จาก Nexmon
-csi_data = csiread.Nexmon()
+csi_data = csiread.Nexmon("pmsg","43455c0",80)
 csi_data.read()
 
 # แสดง amplitude
