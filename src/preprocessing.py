@@ -11,3 +11,4 @@ def normalize_csi(data):
     scaler = MinMaxScaler()
     normalized = scaler.fit_transform(data)
     return normalized
+    
