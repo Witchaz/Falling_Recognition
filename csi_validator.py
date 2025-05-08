@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("./csi_data/test/test_6.csv")
+df = pd.read_csv("./csi_data/walk/walk_10.csv")
 
 # ตรวจว่ามีกี่คอลัมน์
 print(df.columns)
@@ -10,7 +10,7 @@ print(df.isnull().sum())
 
 # ตรวจว่าแถวใดมีคอลัมน์ไม่ครบ
 expected_cols = 65  # timestamp + 30 subcarriers
-with open("./csi_data/test/test_6.csv") as f:
+with open("./csi_data/walk/walk_10.csv") as f:
     for i, line in enumerate(f):
         data_amount = len(line.strip().split(","))
         if data_amount != expected_cols:

@@ -1,4 +1,5 @@
 import numpy as np
+
 from scipy.ndimage import uniform_filter1d
 from sklearn.preprocessing import MinMaxScaler
 
@@ -11,4 +12,3 @@ def normalize_csi(data):
     scaler = MinMaxScaler()
     normalized = scaler.fit_transform(data)
     return normalized
-    

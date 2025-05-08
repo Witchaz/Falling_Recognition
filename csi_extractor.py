@@ -212,7 +212,7 @@ def sniffing(nicname, mac_address):
         csi = udp.data[18:]
         bandwidth = ip.__hdr__[2][2]
         # Get CSI complex values
-        csi_cmplx = process_csi_data(csi, BANDWIDTH)
+        csi_cmplx = process_csi_data(csi, bandwidth)
         # Separate real and imag for saving
         csi_real = csi_cmplx.real
         csi_imag = csi_cmplx.imag
