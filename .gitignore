@@ -176,3 +176,4 @@ cython_debug/
 # Dataset
 /csi_data
 /papers
+/keypoint_csv

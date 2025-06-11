@@ -228,7 +228,8 @@ def sniffing(nicname, mac_address):
         
         # Update plot
         idx += 1
-        txt, minmax, gap_count = update_plot(line_list, y_list, csi_cmplx, minmax, gap_count, txt, ax)
+        txt, minmax, gap_count = update_plot(line_list, y_list, np.abs(csi_cmplx), minmax, gap_count, txt, ax)
+
         
         # Update display
         fig.canvas.draw()
